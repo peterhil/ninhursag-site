@@ -2,7 +2,7 @@ export type Indexable = string | number | symbol
 
 export interface MineralsData {
 	name: String,
-	url: String,
+	value: any,
 }
 
 export type MineralsOutput = {

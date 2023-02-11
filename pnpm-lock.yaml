@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@jridgewell/sourcemap-codec': ^1.4.14
   '@sveltejs/adapter-auto': ^2.0.0
   '@sveltejs/kit': ^1.5.0
   '@typescript-eslint/eslint-plugin': ^5.45.0
@@ -20,6 +21,7 @@ specifiers:
   vitest: ^0.25.3
 
 devDependencies:
+  '@jridgewell/sourcemap-codec': 1.4.14
   '@sveltejs/adapter-auto': 2.0.0_@sveltejs+kit@1.5.5
   '@sveltejs/kit': 1.5.5_svelte@3.55.1+vite@4.1.1
   '@typescript-eslint/eslint-plugin': 5.51.0_z4swst3wuuqk4hlme4ajzslgh4

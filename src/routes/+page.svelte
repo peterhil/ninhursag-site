@@ -1,5 +1,5 @@
 <script>
-    import Minerals from '$lib/Minerals.svelte'
+	import Minerals from '$lib/Minerals.svelte'
 </script>
 
 <h1>Welcome to SvelteKit</h1>

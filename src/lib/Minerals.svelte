@@ -1,5 +1,7 @@
-<script>
-	export let data
+<script lang="ts">
+	import type { MineralsData } from '$lib/types'
+
+	export let data: MineralsData[]
 </script>
 
 <code>

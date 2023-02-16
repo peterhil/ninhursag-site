@@ -16,9 +16,28 @@ $color-dark: #070707;
 
 $color-primary: $color-ninhursag;
 $color-secondary: $color-grey;
-$color-text: $color-grey;
+
 $color-loading: $color-primary;
-$color-action: $color-dark;
+
+:root {
+	color-scheme: light dark;
+
+	@media (prefers-color-scheme: light) {
+		--color-bg: $color-white;
+		--color-text: $color-grey;
+		--button-action: #008cba;
+		--button-text: #f9f9f9;
+		--icon-color: '#f707f7';
+	}
+
+	@media (prefers-color-scheme: dark) {
+		--color-bg: $color-dark;
+		--color-text: $color-light;
+		--button-action: #008cba;
+		--button-text: #f9f9f9;
+		--icon-color: '#f9f9f9';
+	}
+}
 
 // Font families
 
@@ -29,7 +48,6 @@ $font-set-italic: Lora, serif;
 
 // Icons
 
-$icon-color: $color-white;
 $icon-stroke: 2.2px;
 
 // Other

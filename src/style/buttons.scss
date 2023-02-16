@@ -1,3 +1,3 @@
 .button-action {
-	@include button-color($color-action, $color-white);
+	@include button-color(var(--button-action), var(--button-text));
 }

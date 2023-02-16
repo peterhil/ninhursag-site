@@ -4,9 +4,9 @@
 
 	type OutputProps = PageData & MineralsOutput
 
-	import Minerals from '$lib/Minerals.svelte'
+	import MineralList from '$component/MineralList.svelte'
 
 	export let data: OutputProps
 </script>
 
-<Minerals data={data.minerals} />
+<MineralList data={data.minerals} />

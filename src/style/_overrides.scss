@@ -1,6 +1,15 @@
 //
 // Override milligram styles
 
+button,
+.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	padding: 0.5rem;
+	border-radius: 3px;
+}
+
 fieldset, input, select, textarea {
 	margin-bottom: 0.5rem;
 }

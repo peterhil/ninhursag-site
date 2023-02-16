@@ -61,7 +61,7 @@ $padding-inline: clamp(20px, 5vw, 50px);
 @mixin button-color($color: $color, $color-text: var(--color-text-inverse)) {
 	color: $color-text;
 	background-color: $color;
-	border-color: $color;
+	border: 0.1rem solid $color;
 
 	&.button-clear,
 	&.button-outline {
@@ -71,5 +71,20 @@ $padding-inline: clamp(20px, 5vw, 50px);
 
 	&.button-clear {
 		border-color: transparent;
+	}
+
+	&:focus,
+	&:focus-visible {
+		outline: 3px solid rgb($color, 0.5);
+		border-radius: 2px;
+		box-shadow: 3px 3px 3px 0px $color;
+
+		&:hover {
+			box-shadow: 3px 3px 3px 0px var(--hover-bg);
+		}
+	}
+
+	&:focus {
+		outline: 0;
 	}
 }

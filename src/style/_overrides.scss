@@ -19,7 +19,7 @@ input[type="submit"] {
 	background-color: var(--color-action);
 	color: var(--color-text-inverse);
 	border-radius: 3px;
-	border: 0.1rem solid currentColor;
+	border: 0.1rem solid var(--color-action);
 	cursor: pointer;
 	// Text
 	font-size: 1.1rem;
@@ -32,7 +32,10 @@ input[type="submit"] {
 	white-space: normal;
 	word-break: break-word;
 
-	&:focus,
+	&:focus {
+		outline: 0;
+	}
+
 	&:hover {
 		background-color: var(--hover-bg);
 		border-color: var(--hover-bg);
@@ -48,14 +51,15 @@ input[type="submit"] {
 		&:hover {
 			background-color: var(--color-action);
 			border-color: var(--color-action);
+			color: var(--color-text-inverse);
 		}
 	}
 
 	&.button-outline {
 		background-color: transparent;
 		color: var(--color-action);
+		border: 0.1rem solid currentColor;
 
-		&:focus,
 		&:hover {
 			background-color: transparent;
 			border-color: var(--hover-bg);
@@ -76,7 +80,6 @@ input[type="submit"] {
 		border-color: transparent;
 		color: var(--color-action);
 
-		&:focus,
 		&:hover {
 			background-color: transparent;
 			border-color: transparent;

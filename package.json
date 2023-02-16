@@ -13,6 +13,7 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"dependencies": {
+		"@icon-park/svg": "^1.4.2",
 		"@iconify/icons-carbon": "^1.2.15",
 		"@iconify/icons-icon-park": "^1.2.9",
 		"@iconify/svelte": "^3.1.0",

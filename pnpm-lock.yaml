@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@iconify/icons-carbon': ^1.2.15
+  '@iconify/icons-icon-park': ^1.2.9
   '@iconify/svelte': ^3.1.0
   '@jridgewell/sourcemap-codec': ^1.4.14
   '@sveltejs/adapter-auto': ^2.0.0
@@ -42,6 +43,7 @@ specifiers:
 
 dependencies:
   '@iconify/icons-carbon': 1.2.15
+  '@iconify/icons-icon-park': 1.2.9
   '@iconify/svelte': 3.1.0_svelte@3.55.1
   carbon-icons-svelte: 11.4.0
   d3-array: 2.12.1
@@ -321,6 +323,12 @@ packages:
 
   /@iconify/icons-carbon/1.2.15:
     resolution: {integrity: sha512-eTuylQU2M9u2DWCQsLHA40mESCZ6ck69/RIcqsXw7LCAWX1MiYnmr1BbdXcJ18d2ba24w3UNwxAFNvVIIVtHRg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify/icons-icon-park/1.2.9:
+    resolution: {integrity: sha512-sIuGMII4q70f7XMkuZVNRy8WDHnc6hWg1jzMUgdXTUpbZuHvrNCB47MohIy/rnlffbYxcYfnVLETapqo8NMlCA==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false

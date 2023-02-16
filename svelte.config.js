@@ -20,7 +20,9 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			$components: 'src/components',
+			$component: 'src/lib/component',
+			$store: 'src/lib/store',
+			$style: 'src/style',
 		},
 	}
 };

@@ -21,6 +21,7 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$component: 'src/lib/component',
+			$npm: 'node_modules',
 			$store: 'src/lib/store',
 			$style: 'src/style',
 		},

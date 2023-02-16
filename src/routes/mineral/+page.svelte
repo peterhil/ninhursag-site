@@ -16,13 +16,17 @@
 	export let data: OutputProps
 </script>
 
-<button type="button" class="button-action">
-	<Icon icon="mineral" width={32} />
-</button>
-<button type="button" class="button-action">
-	<Carbon size={32} />
-</button>
-<button type="button" class="button-action">
-	<FunctionMath size={32} />
-</button>
-<MineralList data={data.minerals} />
+<main>
+	<div>
+		<button type="button" class="button-action">
+			<Icon icon="mineral" width={32} />
+		</button>
+		<button type="button" class="button-action">
+			<Carbon size={32} />
+		</button>
+		<button type="button" class="button-action">
+			<FunctionMath size={32} />
+		</button>
+	</div>
+	<MineralList data={data.minerals} />
+</main>

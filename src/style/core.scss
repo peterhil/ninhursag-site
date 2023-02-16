@@ -1,0 +1,55 @@
+//
+// Layout
+
+body {
+	font-family: $font-set-body;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+	margin: 0;
+	padding: 0;
+	background-color: $color-white;
+	color: $color-text;
+	hyphens: auto;
+	text-overflow: ellipsis;
+}
+
+main {
+	padding: 0 $padding-inline;
+}
+
+nav.navigation {
+	font-family: $font-set-headings;
+	font-weight: 500;
+	background-color: $color-light;
+	color: $color-text;
+	border: clamp(20px, 4vw, 70px) solid $color-primary;
+	border-block-color: $color-white;
+	border-top: 3vh solid $color-white;
+
+	section {
+		padding-inline: $padding-inline;
+	}
+
+	a {
+		color: $color-primary;
+	}
+
+	h1 {
+		display: inline-block;
+		padding: 1rem 0;
+		font-size: clamp(18px, 6vw, 4rem);
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	max-height: 100%;
+}
+
+@media (min-width: 40rem) {
+	aside {
+		// max-width: 320px;
+	}
+}

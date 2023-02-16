@@ -21,11 +21,11 @@
 			<IconPark icon={HeavyMetal} size={32} />
 			Mineral
 		</button>
-		<button type="button" class="button-action">
+		<button type="button" class="button-outline">
 			<Carbon size={32} />
 			Element
 		</button>
-		<button type="button" class="button-action">
+		<button type="button" class="button-clear">
 			<FunctionMath size={32} />
 			Function
 		</button>

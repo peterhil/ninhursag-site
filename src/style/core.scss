@@ -20,18 +20,37 @@ main {
 nav.navigation {
 	font-family: $font-set-headings;
 	font-weight: 500;
-	background-color: var(--color-bg);
-	color: var(--color-text);
-	border: clamp(20px, 4vw, 70px) solid $color-primary;
-	border-block-color: $color-white;
-	border-top: 3vh solid $color-white;
+	background-color: var(--nav-bg);
+	color: var(--nav-text);
+	border: clamp(20px, 4vw, 70px) solid var(--nav-bg);
+	border-block-color: var(--color-bg);
+	border-top-width: 2.4vh;
+	border-right-width: clamp(20px, 7vw, 70px);
+
+	background-image: linear-gradient(
+		0.1turn,
+		transparent 79%,
+		var(--color-accent) 100%
+	);
+
+	@media (prefers-color-scheme: dark) {
+		background-image: linear-gradient(
+			0.1turn,
+			transparent 79%,
+			#ffe170 100%
+		);
+	}
 
 	section {
 		padding-inline: $padding-inline;
 	}
 
 	a {
-		color: $color-primary;
+		color: var(--nav-text);
+
+		&:hover {
+			color: var(--hover-text);
+		}
 	}
 
 	h1 {

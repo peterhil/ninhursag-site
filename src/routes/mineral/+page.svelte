@@ -7,6 +7,7 @@
 	import IconPark from '$component/IconPark.svelte'
 	import { HeavyMetal } from '@icon-park/svg'
 
+	import LoadingSpinner from '$component/LoadingSpinner.svelte'
 	import MineralList from '$component/MineralList.svelte'
 
 	type OutputProps = PageData & MineralsOutput
@@ -17,7 +18,7 @@
 <main>
 	<div>
 		<button type="button" class="button-action">
-			<IconPark icon={HeavyMetal} size="32" />
+			<IconPark icon={HeavyMetal} size={32} />
 			Mineral
 		</button>
 		<button type="button" class="button-action">
@@ -29,5 +30,6 @@
 			Function
 		</button>
 	</div>
+	<LoadingSpinner />
 	<MineralList data={data.minerals} />
 </main>

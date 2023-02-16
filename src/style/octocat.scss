@@ -11,8 +11,8 @@
 	width: 56px;
 	height: auto;
 	border: 0;
-	color: $color-light;
-	fill: #0a0a0a;
+	color: var(--color-action);
+	fill: var(--color-text-inverse);
 
 	img {
 		width: 100%;
@@ -27,7 +27,7 @@
 
 .octocat .octocat-arm,
 .octocat .octocat-body {
-	fill: $color-light;
+	fill: var(--color-text-inverse);
 }
 
 @keyframes b {

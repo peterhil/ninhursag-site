@@ -27,11 +27,11 @@ h1 {
 }
 
 a {
-	color: $color-primary;
+	color: var(--color-action);
 }
 
 hr {
-	border: 10px solid $color-primary;
+	border: 10px solid var(--color-action);
 }
 
 ul {

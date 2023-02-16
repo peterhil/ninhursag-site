@@ -1,8 +1,8 @@
 export type Indexable = string | number | symbol
 
 export interface MineralsData {
-	name: String
-	value: any
+	name: string
+	value: string
 }
 
 export type MineralsOutput = {

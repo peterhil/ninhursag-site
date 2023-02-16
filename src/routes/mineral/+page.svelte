@@ -30,6 +30,6 @@
 			Function
 		</button>
 	</div>
-	<LoadingSpinner />
+	<!-- <LoadingSpinner /> -->
 	<MineralList data={data.minerals} />
 </main>

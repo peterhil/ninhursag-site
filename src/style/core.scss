@@ -42,7 +42,7 @@ nav.navigation {
 	}
 
 	section {
-		padding-inline: $padding-inline;
+		padding-inline: 2rem;
 	}
 
 	a {
@@ -55,8 +55,18 @@ nav.navigation {
 
 	h1 {
 		display: inline-block;
-		padding: 1rem 0;
+		padding-top: 0.5rem;
 		font-size: clamp(18px, 6vw, 4rem);
+	}
+
+	@media (min-width: $size-md) {
+		section {
+			padding-inline: $padding-inline;
+		}
+
+		h1 {
+			padding-top: 1rem;
+		}
 	}
 }
 
@@ -65,10 +75,4 @@ img {
 	max-width: 100%;
 	height: auto;
 	max-height: 100%;
-}
-
-@media (min-width: 40rem) {
-	aside {
-		// max-width: 320px;
-	}
 }

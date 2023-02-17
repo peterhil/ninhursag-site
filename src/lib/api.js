@@ -1,5 +1,7 @@
 import { identity } from 'ramda'
 
+export const API_SERVER = 'http://ninhursag.localdomain:5000'
+
 function isJson (response) {
 	return response.headers.get('Content-Type') === 'application/json'
 }
@@ -21,7 +23,7 @@ export async function get (
 	success = identity,
 	failure = console.error,
 ) {
-	return await fetch(url)
+	return await fetch(API_SERVER + url)
 		.then(handleResponse)
 		.then(success)
 		.catch(failure)
@@ -33,7 +35,7 @@ export async function post (
 	success = identity,
 	failure = console.error,
 ) {
-	return await fetch(url, {
+	return await fetch(API_SERVER + url, {
 		...data,
 		// Force these parameters (override data parameters):
 		method: 'POST',

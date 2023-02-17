@@ -1,7 +1,7 @@
 <script>
 	import { debounce } from 'debounce'
-	import { minerals } from '$store/minerals'
 
+	export let minerals = []
 	export let selected
 
 	const onSelected = (event) => {
@@ -14,15 +14,9 @@
 </script>
 
 <label for="mineral">Select resource
-	{#await $minerals }
-	<p>Loading...</p>
-	{:then $minerals}
 	<select id="mineral" on:change={onSelectedDebounced}>
-		{#each [...Object.keys($minerals)] as mineral}
+		{#each [...Object.keys(minerals)] as mineral}
 		<option value="{mineral}" selected="{mineral === selected}">{mineral}</option>
 		{/each}
 	</select>
-	{:catch error}
-	<p class="text-error">Problem loading mineral data: { error }</p>
-	{/await}
 </label>

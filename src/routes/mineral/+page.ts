@@ -1,15 +1,13 @@
 import type { PageLoad } from './$types'
 
+import api from '$lib/api'
+
 export const load = (async ({ fetch }) => {
-	const res = await fetch('http://ninhursag.localdomain:5000/api/v1/minerals')
-	const data = await res.json()
+	const functions = await api.get('/api/v1/estimate')
+	const minerals = await api.get('/api/v1/minerals')
 
-	const minerals = Object.entries(data).map((pair) => {
-		return {
-			name: pair[0],
-			value: pair[1],
-		}
-	})
-
-	return { minerals }
+	return {
+		functions,
+		minerals,
+	}
 }) satisfies PageLoad

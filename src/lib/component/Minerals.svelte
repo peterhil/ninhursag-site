@@ -14,6 +14,8 @@
 	import { mineral } from '$store/mineral'
 
 	const caption = 'U.S. Geological Survey statistics (Metric tons gross weight)'
+
+	export let data
 </script>
 
 <div class="row">
@@ -22,10 +24,10 @@
 
 		<div class="row">
 			<div class="large-4 medium-6 columns">
-				<SelectMineral bind:selected="{$mineral}" />
+				<SelectMineral minerals={data.minerals} bind:selected="{$mineral}" />
 			</div>
 			<div class="large-4 medium-6 columns">
-				<SelectFunction bind:selected="{$fn}" />
+				<SelectFunction functions={data.functions} bind:selected="{$fn}" />
 			</div>
 		</div>
 
@@ -42,7 +44,7 @@
 
 		<figure>
 			<figcaption>{caption}</figcaption>
-			<DataLoader let:data data="{chart}">
+			<DataLoader let:data data={chart}>
 				<SvgChart {data}></SvgChart>
 			</DataLoader>
 		</figure>

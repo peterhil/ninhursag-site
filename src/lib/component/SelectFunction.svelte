@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { debounce } from 'debounce'
 
-	import { functions } from '$store/functions'
 	import { controller } from '$store/estimate'
 
+	export let functions
 	export let selected
 
 	const onSelected = (event) => {
@@ -21,15 +21,9 @@
 </script>
 
 <label for="function">Select function
-	{#await $functions }
-	<p>Loading...</p>
-	{:then $functions}
 	<select id="function" on:change={onSelectedDebounced}>
-		{#each $functions.pdf as fn}
+		{#each functions.pdf as fn}
 		<option value="{fn}" selected="{fn === selected}">{fn}</option>
 		{/each}
 	</select>
-	{:catch error}
-	<p class="text-error">Problem loading functions: { error }</p>
-	{/await}
 </label>

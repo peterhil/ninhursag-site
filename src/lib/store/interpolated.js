@@ -3,7 +3,7 @@ import { asyncable } from 'svelte-asyncable'
 
 import { productionSeries } from '$lib/data'
 import { interpolateData } from '$lib/interpolate'
-import { data } from './data'
+import { data } from '$store/data'
 
 const initialValue = { columns: {} }
 

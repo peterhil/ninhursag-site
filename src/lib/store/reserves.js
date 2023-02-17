@@ -1,9 +1,9 @@
 import { fromPairs } from 'ramda'
 import { asyncable } from 'svelte-asyncable'
 import { calculateReserves, getReserves } from '$lib/reserves'
-import { cumulative } from './cumulative'
-import { reserveData } from './reserveData'
-import { mineral } from './mineral'
+import { cumulative } from '$store/cumulative'
+import { reserveData } from '$store/reserveData'
+import { mineral } from '$store/mineral'
 
 const initialValue = { columns: {} }
 

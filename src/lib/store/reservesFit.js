@@ -2,9 +2,9 @@ import { fromPairs } from 'ramda'
 import { derived } from 'svelte/store'
 
 import { calculateReserves, getReserves } from '$lib/reserves'
-import { cumulativeFit } from './cumulativeFit'
-import { reserveData } from './reserveData'
-import { mineral } from './mineral'
+import { cumulativeFit } from '$store/cumulativeFit'
+import { reserveData } from '$store/reserveData'
+import { mineral } from '$store/mineral'
 
 const initialValue = { columns: {} }
 

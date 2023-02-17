@@ -1,5 +1,5 @@
 <script>
-	import LoadingSpinner from './LoadingSpinner.svelte'
+	import LoadingSpinner from '$component/LoadingSpinner.svelte'
 
 	// Use slot props to pass the loaded data into components inside the slot
 	// https://svelte.dev/docs#slot_let

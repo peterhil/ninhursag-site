@@ -11,11 +11,11 @@
 		values
 	} from 'ramda'
 
-	import GridLabels from './GridLabels.svelte'
-	import GridLines from './GridLines.svelte'
-	// import HoverTool from './HoverTool.svelte'
-	import Legend from './Legend.svelte'
-	import LineSeries from './LineSeries.svelte'
+	import GridLabels from '$component/GridLabels.svelte'
+	import GridLines from '$component/GridLines.svelte'
+	// import HoverTool from '$component/HoverTool.svelte'
+	import Legend from '$component/Legend.svelte'
+	import LineSeries from '$component/LineSeries.svelte'
 	import { scale } from '$store/scale'
 	import { showAll } from '$store/showAll'
 	import { fixNaNs } from '$lib/charting'

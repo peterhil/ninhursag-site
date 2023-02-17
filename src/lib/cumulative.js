@@ -1,5 +1,5 @@
 import { mapObjIndexed } from 'ramda'
-import { accumulator, finite } from './data'
+import { accumulator, finite } from '$lib/data'
 
 export function accumulateDataSeries (dataSeries) {
 	const numbers = finite(dataSeries)

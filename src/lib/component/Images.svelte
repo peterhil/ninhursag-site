@@ -1,7 +1,7 @@
 <script>
 	import { images } from '$store/images.js'
-	import Image from './Image.svelte'
-	import LoadingSpinner from './LoadingSpinner.svelte'
+	import Image from '$component/Image.svelte'
+	import LoadingSpinner from '$component/LoadingSpinner.svelte'
 
 	export let mineral
 </script>

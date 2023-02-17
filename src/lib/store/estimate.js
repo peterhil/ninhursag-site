@@ -8,9 +8,9 @@ import {
 	dataForEstimate,
 	reportFitQuality,
 } from '$lib/estimate'
-import { alerts } from './alerts'
-import { data } from './data'
-import { fn } from './function'
+import { alerts } from '$store/alerts'
+import { data } from '$store/data'
+import { fn } from '$store/function'
 
 export let controller
 

@@ -6,7 +6,7 @@ import {
 import { asyncable } from 'svelte-asyncable'
 import { accumulateDataSeries } from '$lib/cumulative'
 import { repeatLastValue } from '$lib/data'
-import { interpolated } from './interpolated'
+import { interpolated } from '$store/interpolated'
 
 const initialValue = { columns: {} }
 

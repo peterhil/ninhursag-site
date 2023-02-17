@@ -3,7 +3,7 @@ import { asyncable } from 'svelte-asyncable'
 import api from '$lib/api'
 import { cleanup } from '$lib/csv'
 import { alerts } from '$store/alerts'
-import { mineral } from './mineral.js'
+import { mineral } from '$store/mineral.js'
 
 function errorHandler (error) {
 	alerts.error(error.message)

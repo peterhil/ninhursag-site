@@ -1,12 +1,12 @@
 import { derived } from 'svelte/store'
 
-import { cumulative } from './cumulative'
-import { cumulativeFit } from './cumulativeFit'
-import { data } from './data'
-import { estimate } from './estimate'
-import { interpolated } from './interpolated'
-import { reserves } from './reserves'
-import { reservesFit } from './reservesFit'
+import { cumulative } from '$store/cumulative'
+import { cumulativeFit } from '$store/cumulativeFit'
+import { data } from '$store/data'
+import { estimate } from '$store/estimate'
+import { interpolated } from '$store/interpolated'
+import { reserves } from '$store/reserves'
+import { reservesFit } from '$store/reservesFit'
 
 const initialValue = { data: {}, reserves: {}, columns: {} }
 

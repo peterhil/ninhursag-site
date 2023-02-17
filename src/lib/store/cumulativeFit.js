@@ -6,7 +6,7 @@ import {
 import { derived } from 'svelte/store'
 
 import { accumulateDataSeries } from '$lib/cumulative'
-import { estimate } from './estimate'
+import { estimate } from '$store/estimate'
 
 const initialValue = { columns: {} }
 

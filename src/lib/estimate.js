@@ -7,7 +7,7 @@ import {
 	transpose,
 	zipObj,
 } from 'ramda'
-import { toChartData } from './data'
+import { toChartData } from '$lib/data'
 
 // Transform chart data format into object with arrays for years and data
 export function dataForEstimate (series) {

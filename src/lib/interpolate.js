@@ -10,7 +10,7 @@ import {
 	toPairs,
 	unnest,
 } from 'ramda'
-import { finite } from './data'
+import { finite } from '$lib/data'
 
 function eitherNaN (a, b) {
 	return isNaN(parseFloat(a)) || isNaN(parseFloat(b))

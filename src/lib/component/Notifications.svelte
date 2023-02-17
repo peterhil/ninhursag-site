@@ -1,5 +1,5 @@
 <script>
-	import Alert from './Alert.svelte'
+	import Alert from '$component/Alert.svelte'
 	import { alerts } from '$store/alerts'
 </script>
 

@@ -1,6 +1,6 @@
 import { __, curryN } from 'ramda'
 import { writable } from 'svelte/store'
-import { randomId } from '../lib/utils'
+import { randomId } from '$lib/utils'
 
 function createAlerts () {
 	const { subscribe, set, update } = writable(new Map())

@@ -1,6 +1,6 @@
 <script>
 	import Alert from './Alert.svelte'
-	import { alerts } from '../stores/alerts'
+	import { alerts } from '$store/alerts'
 </script>
 
 <div id="notifications">

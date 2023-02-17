@@ -1,8 +1,8 @@
 import { fromPairs } from 'ramda'
 import { asyncable } from 'svelte-asyncable'
 
-import { productionSeries } from '../lib/data'
-import { interpolateData } from '../lib/interpolate'
+import { productionSeries } from '$lib/data'
+import { interpolateData } from '$lib/interpolate'
 import { data } from './data'
 
 const initialValue = { columns: {} }

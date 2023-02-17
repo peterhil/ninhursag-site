@@ -1,5 +1,5 @@
 <script>
-	import { seriesStyle } from '../lib/charting'
+	import { seriesStyle } from '$lib/charting'
 
 	export let series
 </script>

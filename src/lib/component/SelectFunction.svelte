@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { debounce } from 'debounce'
 
-	import { functions } from '../stores/functions'
-	import { controller } from '../stores/estimate'
+	import { functions } from '$store/functions'
+	import { controller } from '$store/estimate'
 
 	export let selected
 

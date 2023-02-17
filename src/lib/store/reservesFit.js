@@ -1,7 +1,7 @@
 import { fromPairs } from 'ramda'
 import { derived } from 'svelte/store'
 
-import { calculateReserves, getReserves } from '../lib/reserves'
+import { calculateReserves, getReserves } from '$lib/reserves'
 import { cumulativeFit } from './cumulativeFit'
 import { reserveData } from './reserveData'
 import { mineral } from './mineral'

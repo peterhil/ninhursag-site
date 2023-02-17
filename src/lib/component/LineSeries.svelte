@@ -1,6 +1,6 @@
 <script>
 	import { toPairs } from 'ramda'
-	import { seriesStyle } from '../lib/charting'
+	import { seriesStyle } from '$lib/charting'
 
 	export let data
 	export let line // TODO Fix the mess with D3.js API

@@ -1,13 +1,13 @@
 import { curry, keys } from 'ramda'
 import { asyncable } from 'svelte-asyncable'
 
-import api from '../lib/api'
-import { productionSeries, productionSeriesName } from '../lib/data'
+import api from '$lib/api'
+import { productionSeries, productionSeriesName } from '$lib/data'
 import {
 	chartDataFromEstimate,
 	dataForEstimate,
 	reportFitQuality,
-} from '../lib/estimate'
+} from '$lib/estimate'
 import { alerts } from './alerts'
 import { data } from './data'
 import { fn } from './function'

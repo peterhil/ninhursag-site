@@ -5,7 +5,7 @@ import {
 } from 'ramda'
 import { derived } from 'svelte/store'
 
-import { accumulateDataSeries } from '../lib/cumulative'
+import { accumulateDataSeries } from '$lib/cumulative'
 import { estimate } from './estimate'
 
 const initialValue = { columns: {} }

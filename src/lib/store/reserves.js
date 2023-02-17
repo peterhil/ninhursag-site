@@ -1,6 +1,6 @@
 import { fromPairs } from 'ramda'
 import { asyncable } from 'svelte-asyncable'
-import { calculateReserves, getReserves } from '../lib/reserves'
+import { calculateReserves, getReserves } from '$lib/reserves'
 import { cumulative } from './cumulative'
 import { reserveData } from './reserveData'
 import { mineral } from './mineral'

@@ -16,9 +16,9 @@
 	// import HoverTool from './HoverTool.svelte'
 	import Legend from './Legend.svelte'
 	import LineSeries from './LineSeries.svelte'
-	import { scale } from '../stores/scale'
-	import { showAll } from '../stores/showAll'
-	import { fixNaNs } from '../lib/charting'
+	import { scale } from '$store/scale'
+	import { showAll } from '$store/showAll'
+	import { fixNaNs } from '$lib/charting'
 
 	export let data
 

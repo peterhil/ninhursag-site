@@ -9,6 +9,7 @@
 
 	import LoadingSpinner from '$component/LoadingSpinner.svelte'
 	import MineralList from '$component/MineralList.svelte'
+	import Minerals from '$component/Minerals.svelte'
 
 	type OutputProps = PageData & MineralsOutput
 
@@ -31,5 +32,6 @@
 		</button>
 	</div>
 	<!-- <LoadingSpinner /> -->
-	<MineralList data={data.minerals} />
+	<!-- <MineralList data={data.minerals} /> -->
+	<Minerals />
 </main>

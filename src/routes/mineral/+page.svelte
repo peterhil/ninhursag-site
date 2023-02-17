@@ -32,6 +32,6 @@
 		</button>
 	</div>
 	<!-- <LoadingSpinner /> -->
-	<!-- <MineralList data={data.minerals} /> -->
-	<Minerals />
+	<MineralList data={data.minerals} />
+	<!-- <Minerals /> -->
 </main>

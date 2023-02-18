@@ -11,7 +11,7 @@
 	role="alertdialog"
 	tabindex="-1"
 	in:fade="{{ duration: 100 }}"
-	out:fade="{{ duration: 500 }}"
+	out:fade="{{ duration: 250 }}"
 	>
 	<button
 		class="button button-clear close"

@@ -2,8 +2,27 @@ import { __, curryN } from 'ramda'
 import { writable } from 'svelte/store'
 import { randomId } from '$lib/utils'
 
+const alertMap = new Map()
+
+const levels = [
+	'info',
+	'tip',
+	'success',
+	'failure',
+	'warning',
+	'error',
+]
+
+export function maxLevel (alerts) {
+	const data = [...alerts.values()].map(v => levels.indexOf(v.type))
+	const max = data.reduce((a, b) => Math.max(a, b), 0)
+	const level = levels[max]
+
+	return level
+}
+
 function createAlerts () {
-	const { subscribe, set, update } = writable(new Map())
+	const { subscribe, set, update } = writable(alertMap)
 
 	const remove = (id) => update(
 		(alerts) => {
@@ -29,15 +48,16 @@ function createAlerts () {
 
 	return {
 		subscribe,
-		add,
-		message: add('', __, 4000),
-		secondary: add('secondary', __, 4000),
-		success: add('success', __, 4000),
-		info: add('info', __, 4000),
-		warning: add('warning', __, 4000),
-		error: add('alert', __, 4000),
 		remove,
-		reset: () => set(new Map()),
+		add,
+		reset: () => set(alertMap.clear()),
+		// Levels
+		info: add('info', __, 4000),
+		tip: add('tip', __, 4000),
+		success: add('success', __, 4000),
+		failure: add('failure', __, 4000),
+		warning: add('warning', __, 4000),
+		error: add('error', __, 4000),
 	}
 }
 

@@ -1,30 +1,51 @@
-#notifications {
-	.growl {
-		z-index: 3000;
-		top: 70px;
+#alerts {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+
+	position: absolute;
+	z-index: 10000;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	margin: 2rem;
+	padding: 1.5rem;
+	background: var(--color-alert-bg);
+	color: var(--color-alert);
+	border: 12px solid;
+
+	font-family: 'IBM Plex Mono', $font-set-figures;
+	font-weight: 700;
+
+	&:empty {
+		display: none;
 	}
 
-	&.in-page .growl {
-		position: static;
-		width: 100%;
-		float: none;
-	}
+	.alert {
+		cursor: pointer;
+		color: var(--color-alert);
 
-	.growl-container > .growl-item {
-		background-position: center;
+		&:hover {
+			background: var(--hover-text);
+			color: var(--color-alert-bg);
+		}
+
+		.close {
+			margin: 0;
+			padding: 0;
+			font-size: 1.2em;
+			color: currentColor;
+		}
 	}
 }
 
-.alert-box {
-	padding: 10px;
-	padding-right: 35px;
-	margin-bottom: 10px;
-	cursor: pointer;
-
-	.close {
-		right: 0;
-		top: 0;
-		margin: 0;
-		padding: 10px;
-	}
+#alerts,
+#alerts .alert {
+	&.info { color: var(--color-alert-info) }
+	&.tip { color: var(--color-alert-tip) }
+	&.success { color: var(--color-alert-success) }
+	&.failure { color: var(--color-alert-failure) }
+	&.warning { color: var(--color-alert-warning) }
+	&.error { color: var(--color-alert-error) }
 }

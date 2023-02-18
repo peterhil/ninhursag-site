@@ -7,6 +7,7 @@
 	import IconPark from '$component/IconPark.svelte'
 	import { HeavyMetal } from '@icon-park/svg'
 
+	import AlertTest from '$component/AlertTest.svelte'
 	import LoadingSpinner from '$component/LoadingSpinner.svelte'
 	import Minerals from '$component/Minerals.svelte'
 
@@ -30,5 +31,6 @@
 			Function
 		</button>
 	</div>
+	<AlertTest />
 	<Minerals {data}/>
 </main>

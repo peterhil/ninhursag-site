@@ -21,23 +21,6 @@
 	&:empty {
 		display: none;
 	}
-
-	.alert {
-		cursor: pointer;
-		color: var(--color-alert);
-
-		&:hover {
-			background: var(--hover-text);
-			color: var(--color-alert-bg);
-		}
-
-		.close {
-			margin: 0;
-			padding: 0;
-			font-size: 1.2em;
-			color: currentColor;
-		}
-	}
 }
 
 #alerts,
@@ -48,4 +31,27 @@
 	&.failure { color: var(--color-alert-failure) }
 	&.warning { color: var(--color-alert-warning) }
 	&.error { color: var(--color-alert-error) }
+}
+
+#alerts .alert {
+	cursor: pointer;
+
+	&:hover {
+		color: var(--color-alert-bg);
+		background-color: var(--color-alert);
+
+		&.info { background-color: var(--color-alert-info) }
+		&.tip { background-color: var(--color-alert-tip) }
+		&.success { background-color: var(--color-alert-success) }
+		&.failure { background-color: var(--color-alert-failure) }
+		&.warning { background-color: var(--color-alert-warning) }
+		&.error { background-color: var(--color-alert-error) }
+	}
+
+	.close {
+		margin: 0;
+		padding: 0;
+		font-size: 1.2em;
+		color: currentColor;
+	}
 }

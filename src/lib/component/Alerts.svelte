@@ -3,8 +3,12 @@
 	import { alerts, maxLevel } from '$store/alerts'
 
 	var level = 'info'
+	var lastLevel = 'info'
 
-	$: level = maxLevel($alerts)
+	// Make sure the last fading alert doesn’t change the alerts border colour
+	$: level = ($alerts.size > 0
+				? lastLevel = maxLevel($alerts)
+				: lastLevel)
 </script>
 
 <div id="alerts" class={level}>

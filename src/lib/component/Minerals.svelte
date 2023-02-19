@@ -22,13 +22,9 @@
 	<div class="small-12 large-9 columns">
 		<h2>{$mineral}</h2>
 
-		<div class="row">
-			<div class="large-4 medium-6 columns">
-				<SelectMineral minerals={data.minerals} bind:selected="{$mineral}" />
-			</div>
-			<div class="large-4 medium-6 columns">
-				<SelectFunction functions={data.functions} bind:selected="{$fn}" />
-			</div>
+		<div class="selections">
+			<SelectMineral minerals={data.minerals} bind:selected="{$mineral}" />
+			<SelectFunction functions={data.functions} bind:selected="{$fn}" />
 		</div>
 
 		<div class="row">

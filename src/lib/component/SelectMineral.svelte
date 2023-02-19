@@ -1,6 +1,8 @@
 <script>
 	import { debounce } from 'debounce'
 
+	const title = "Select resource"
+
 	export let minerals = []
 	export let selected
 
@@ -13,10 +15,16 @@
 	const onSelectedDebounced = debounce(onSelected, 500)
 </script>
 
-<label for="mineral">Select resource
-	<select id="mineral" on:change={onSelectedDebounced}>
+<label for="mineral">
+	<div>{title}</div>
+	<select
+		id="mineral"
+		class="button button-action"
+		{title}
+		on:change={onSelectedDebounced}
+		>
 		{#each [...Object.keys(minerals)] as mineral}
-		<option value="{mineral}" selected="{mineral === selected}">{mineral}</option>
+			<option value="{mineral}" selected="{mineral === selected}">{mineral}</option>
 		{/each}
 	</select>
 </label>

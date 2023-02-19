@@ -1,4 +1,4 @@
-<script>
+<script context="module">
 	import { alerts } from '$store/alerts'
 
 	export let msg = 'Welcome to Ninhursag! Nap all day cat dog corn cob.'
@@ -9,5 +9,13 @@
 	alerts.add('success', 'Success: ' + msg, timeout)
 	alerts.add('failure', 'Failure: ' + msg, timeout)
 	alerts.add('warning', 'Warning: ' + msg, timeout)
-	alerts.add('error', 'Error: ' + msg, timeout)
+	alerts.add('error', 'Errors: ' + msg, timeout)
+</script>
+
+<script>
+	import { onDestroy } from 'svelte'
+
+	onDestroy(() => {
+		alerts.reset()
+	})
 </script>

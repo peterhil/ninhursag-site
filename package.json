@@ -1,6 +1,6 @@
 {
 	"name": "ninhursag-ts",
-	"version": "0.0.1",
+	"version": "0.10.0",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",

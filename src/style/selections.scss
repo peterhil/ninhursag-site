@@ -4,3 +4,15 @@
 		width: auto;
 	}
 }
+
+select#mineral.button {
+	padding-inline: 4rem;
+
+	background-image:
+		url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23d1d1d1" d="M0,0l6,8l6-8"/></svg>'),
+		url('/svg/mineral.svg');
+	background-position:
+		center right,
+		0.5rem center;
+	background-repeat: no-repeat;
+}

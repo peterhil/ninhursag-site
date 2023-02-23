@@ -1,5 +1,11 @@
+@media (max-width: $size-sm) {
+	input[type="checkbox"],
+	input[type="radio"] {
+		margin: 0;
+	}
+}
+
 label {
-	display: inline-block;
 	width: 100%;
 }
 

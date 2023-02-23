@@ -23,7 +23,7 @@
 	<SelectFunction functions={data.functions} bind:selected="{$fn}" />
 </div>
 <div class="scale">
-	Scale
+	<span class="hide-sm">Scale</span>
 	<LogScaleCheckbox bind:scale="{$scale}" />
 	{#if $scale === 'linear' }
 		<CheckboxShowAll bind:showAll="{$showAll}" />

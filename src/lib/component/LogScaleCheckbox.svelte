@@ -11,5 +11,5 @@
 	<input type="checkbox"
 		   checked="{scale === 'log'}"
 		   on:change="{onScaleToggle}">
-	Logarithmic scale
+	Logarithmic
 </label>

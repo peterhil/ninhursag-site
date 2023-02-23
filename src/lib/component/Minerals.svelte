@@ -21,6 +21,9 @@
 <div class="selections">
 	<SelectMineral minerals={data.minerals} bind:selected="{$mineral}" />
 	<SelectFunction functions={data.functions} bind:selected="{$fn}" />
+</div>
+<div class="scale">
+	Scale
 	<LogScaleCheckbox bind:scale="{$scale}" />
 	{#if $scale === 'linear' }
 		<CheckboxShowAll bind:showAll="{$showAll}" />

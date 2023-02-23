@@ -1,3 +1,14 @@
+label {
+	display: inline-block;
+	width: 100%;
+}
+
+@media (min-width: $size-sm) {
+	label {
+		width: auto;
+	}
+}
+
 select {
 	padding-block: 0.5rem;
 	padding-inline: 1rem 3rem;

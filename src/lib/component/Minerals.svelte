@@ -32,7 +32,7 @@
 
 <div class="row">
 	<div class="small-12 large-9 columns">
-		<h2>{$mineral}</h2>
+		<h2 class="hide-xs">{$mineral}</h2>
 
 		<figure>
 			<figcaption>{caption}</figcaption>

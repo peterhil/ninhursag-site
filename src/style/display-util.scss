@@ -1,3 +1,15 @@
+@media (max-width: $size-xxs) {
+	.hide-xxs {
+		display: none;
+	}
+}
+
+@media (max-width: $size-xs) {
+	.hide-xs {
+		display: none;
+	}
+}
+
 @media (max-width: $size-sm) {
 	.hide-sm {
 		display: none;

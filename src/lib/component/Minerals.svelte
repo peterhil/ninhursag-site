@@ -21,22 +21,15 @@
 <div class="selections">
 	<SelectMineral minerals={data.minerals} bind:selected="{$mineral}" />
 	<SelectFunction functions={data.functions} bind:selected="{$fn}" />
+	<LogScaleCheckbox bind:scale="{$scale}" />
+	{#if $scale === 'linear' }
+		<CheckboxShowAll bind:showAll="{$showAll}" />
+	{/if}
 </div>
 
 <div class="row">
 	<div class="small-12 large-9 columns">
 		<h2>{$mineral}</h2>
-
-		<div class="row">
-			<div class="large-4 medium-6 columns">
-				<LogScaleCheckbox bind:scale="{$scale}" />
-			</div>
-			{#if $scale === 'linear' }
-			<div class="large-4 medium-6 columns">
-				<CheckboxShowAll bind:showAll="{$showAll}" />
-			</div>
-			{/if}
-		</div>
 
 		<figure>
 			<figcaption>{caption}</figcaption>

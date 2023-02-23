@@ -8,13 +8,18 @@
 @import '$style/overrides';
 @import '$style/octocat';
 
+// Core styles
 @import '$style/core';
 @import '$style/typography';
 @import '$style/accessibility';
 
+// Generic component styles
 @import '$style/alerts';
 @import '$style/buttons';
-@import '$style/chart';
+@import '$style/forms';
 @import '$style/icons';
-@import '$style/media';
 @import '$style/loading';
+
+// Specific to Ninhursag
+@import '$style/chart';
+@import '$style/media';

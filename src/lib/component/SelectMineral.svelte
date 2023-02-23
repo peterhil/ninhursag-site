@@ -1,7 +1,7 @@
 <script>
 	import { debounce } from 'debounce'
 
-	const title = "Select resource"
+	const title = "Resource"
 
 	export let minerals = []
 	export let selected

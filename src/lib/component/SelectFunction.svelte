@@ -3,7 +3,7 @@
 
 	import { controller } from '$store/estimate'
 
-	const title = "Select function"
+	const title = "Function"
 
 	export let functions
 	export let selected

@@ -1,13 +1,13 @@
 select {
 	padding-block: 0.5rem;
-	padding-inline: 1rem;
+	padding-inline: 1rem 3rem;
 	max-width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
 
 	&.button {
 		padding-block: 1rem;
-		padding-inline: 1.5rem;
+		padding-inline: 1.5rem 4rem;
 		text-align: left;
 
 		&:focus {

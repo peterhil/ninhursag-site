@@ -1,4 +1,5 @@
 <script lang="ts">
+	import FunctionMath from 'carbon-icons-svelte/lib/FunctionMath.svelte'
 	import { debounce } from 'debounce'
 
 	import { controller } from '$store/estimate'
@@ -23,7 +24,10 @@
 </script>
 
 <label for="function">
-	<div>{title}</div>
+	<div>
+		{title}
+		<FunctionMath size={32} />
+	</div>
 	<select
 		id="function"
 		class="button button-action"

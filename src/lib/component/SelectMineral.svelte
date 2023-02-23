@@ -1,5 +1,8 @@
 <script>
 	import { debounce } from 'debounce'
+	import { HeavyMetal } from '@icon-park/svg'
+
+	import IconPark from '$component/IconPark.svelte'
 
 	const title = "Resource"
 
@@ -16,7 +19,10 @@
 </script>
 
 <label for="mineral">
-	<div>{title}</div>
+	<div>
+		{title}
+		<IconPark icon={HeavyMetal} size={32} />
+	</div>
 	<select
 		id="mineral"
 		class="button button-action"

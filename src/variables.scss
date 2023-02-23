@@ -88,10 +88,10 @@ $padding-inline: clamp(20px, 5vw, 50px);
 	&:focus-visible {
 		outline: 3px solid rgb($color, 0.5);
 		border-radius: 2px;
-		box-shadow: 3px 3px 3px 0px $color;
+		box-shadow: 0 0 6px 0 $color;
 
 		&:hover {
-			box-shadow: 3px 3px 3px 0px var(--hover-bg);
+			box-shadow: 0 0 6px 0 var(--hover-bg);
 		}
 	}
 

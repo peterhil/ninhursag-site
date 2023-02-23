@@ -18,14 +18,14 @@
 	export let data
 </script>
 
+<div class="selections">
+	<SelectMineral minerals={data.minerals} bind:selected="{$mineral}" />
+	<SelectFunction functions={data.functions} bind:selected="{$fn}" />
+</div>
+
 <div class="row">
 	<div class="small-12 large-9 columns">
 		<h2>{$mineral}</h2>
-
-		<div class="selections">
-			<SelectMineral minerals={data.minerals} bind:selected="{$mineral}" />
-			<SelectFunction functions={data.functions} bind:selected="{$fn}" />
-		</div>
 
 		<div class="row">
 			<div class="large-4 medium-6 columns">

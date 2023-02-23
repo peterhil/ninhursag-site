@@ -1,6 +1,9 @@
 // Modules
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
+// Hack: Prevent showing purple primary colour through
+$color-primary: var(--color-text-inverse);
+
 @import 'milligram/src/_Color';
 @import 'milligram/src/_Base';
 @import 'milligram/src/_Blockquote';

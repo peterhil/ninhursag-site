@@ -1,5 +1,5 @@
 const autoprefixer = require('autoprefixer');
-const nested = +   require('postcss-nested');
+const nested = require('postcss-nested');
 
 const config = {
 	plugins: [

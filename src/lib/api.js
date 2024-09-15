@@ -1,6 +1,6 @@
 import { identity } from 'ramda'
 
-export const API_SERVER = 'http://ninhursag.localdomain:5000'
+export const API_SERVER = 'http://localhost:5000'
 
 function isJson (response) {
 	return response.headers.get('Content-Type') === 'application/json'
@@ -39,7 +39,7 @@ export async function post (
 		...data,
 		// Force these parameters (override data parameters):
 		method: 'POST',
-		mode: 'same-origin',
+		mode: 'cors',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(data.body),
 	})

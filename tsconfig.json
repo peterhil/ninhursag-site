@@ -19,6 +19,11 @@
 		"sourceMap": true,
 		"strict": true,
 		"strictNullChecks": true,
+		// workaround for .svelte-kit/tsconfig.json using deprecated preserveValueImports
+		// and importsNotUsedAsValues instead of verbatimModuleSyntax
+		"preserveValueImports": false,
+		"importsNotUsedAsValues": "remove",
+		"verbatimModuleSyntax": true,
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	// except $lib which is handled by https://svelte.dev/docs/kit/configuration#files

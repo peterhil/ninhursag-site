@@ -21,7 +21,7 @@
 	--nav-text: var(--color-text-inverse);
 
 	@media (prefers-color-scheme: light) {
-		--color-action: #009cea;
+		--color-action: #008cca;
 		--color-accent: #3df;
 		--color-alert-bg: var(--color-text-inverse);
 		--color-alert: var(--color-accent);
@@ -30,7 +30,7 @@
 		--color-focus: #8193;
 		--color-text-inverse: #070707;
 		--color-fx-inverse: #9723;
-		--nav-bg: #009cea;
+		--nav-bg: #008cca;
 	}
 
 	@media (prefers-color-scheme: dark) {
@@ -49,6 +49,7 @@
 
 // Breakpoints
 
+$size-xxs: 320px !default;
 $size-xs: 480px !default;
 $size-sm: 600px !default;
 $size-md: 840px !default;
@@ -88,10 +89,10 @@ $padding-inline: clamp(20px, 5vw, 50px);
 	&:focus-visible {
 		outline: 3px solid rgb($color, 0.5);
 		border-radius: 2px;
-		box-shadow: 3px 3px 3px 0px $color;
+		box-shadow: 0 0 6px 0 $color;
 
 		&:hover {
-			box-shadow: 3px 3px 3px 0px var(--hover-bg);
+			box-shadow: 0 0 6px 0 var(--hover-bg);
 		}
 	}
 

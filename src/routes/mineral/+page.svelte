@@ -2,12 +2,8 @@
 	import type { PageData } from './$types'
 	import type { MineralsOutput } from '$lib/types'
 
-	import Carbon from 'carbon-icons-svelte/lib/Carbon.svelte'
-	import FunctionMath from 'carbon-icons-svelte/lib/FunctionMath.svelte'
-	import IconPark from '$component/IconPark.svelte'
-	import { HeavyMetal } from '@icon-park/svg'
-
 	// import AlertTest from '$component/AlertTest.svelte'
+	// import IconButtons from '$component/IconButtons.svelte'
 	import LoadingSpinner from '$component/LoadingSpinner.svelte'
 	import Minerals from '$component/Minerals.svelte'
 
@@ -17,20 +13,7 @@
 </script>
 
 <main>
-	<div>
-		<button type="button" class="button-action">
-			<IconPark icon={HeavyMetal} size={32} />
-			Mineral
-		</button>
-		<button type="button" class="button-outline">
-			<Carbon size={32} />
-			Element
-		</button>
-		<button type="button" class="button-clear">
-			<FunctionMath size={32} />
-			Function
-		</button>
-	</div>
+	<!-- <IconButtons /> -->
 	<!-- <AlertTest /> -->
 	<Minerals {data}/>
 </main>

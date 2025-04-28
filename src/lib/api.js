@@ -39,7 +39,7 @@ export async function post (
 		...data,
 		// Force these parameters (override data parameters):
 		method: 'POST',
-		mode: 'same-origin',
+		mode: 'cors',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(data.body),
 	})

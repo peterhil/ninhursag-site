@@ -13,6 +13,11 @@ body {
 	text-overflow: ellipsis;
 }
 
+::selection {
+	color: var(--color-text-inverse);
+	background-color: var(--color-accent);
+}
+
 main {
 	padding: 0 $padding-inline;
 }

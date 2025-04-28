@@ -10,7 +10,7 @@
 	color-scheme: light dark;
 
 	@media (prefers-color-scheme: light) {
-		--color-action: #009cea;
+		--color-action: #008cca;
 		--color-accent: #3df;
 		--color-alert-bg: var(--color-text-inverse);
 		--color-alert: var(--color-accent);
@@ -19,7 +19,7 @@
 		--color-focus: #8193;
 		--color-text-inverse: #070707;
 		--color-fx-inverse: #9723;
-		--nav-bg: #009cea;
+		--nav-bg: #008cca;
 	}
 
 	@media (prefers-color-scheme: dark) {

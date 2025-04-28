@@ -14,7 +14,7 @@
 	},
 	"dependencies": {
 		"@icon-park/svg": "^1.4.2",
-		"carbon-icons-svelte": "^11.4.0",
+		"carbon-icons-svelte": "^13.3.0",
 		"d3-array": "^3.2.4",
 		"d3-scale": "^4.0.2",
 		"d3-shape": "^3.2.0",
@@ -28,7 +28,7 @@
 		"ramda": "0.27.1",
 		"soundex-code": "0.1.2",
 		"spin.js": "2.3.2",
-		"svelte-asyncable": "^2.0.4",
+		"svelte-asyncable": "^2.2.1",
 		"tinycolor2": "1.1.2"
 	},
 	"devDependencies": {

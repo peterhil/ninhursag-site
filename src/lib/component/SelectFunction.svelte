@@ -33,7 +33,7 @@
 		class="button button-action"
 		aria-label={title}
 		on:change={onSelectedDebounced}>
-		{#each functions.pdf as fn}
+		{#each functions.pdf as fn (fn)}
 			<option value="{fn}" selected="{fn === selected}">{fn}</option>
 		{/each}
 	</select>

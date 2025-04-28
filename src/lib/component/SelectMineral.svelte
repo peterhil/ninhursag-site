@@ -29,7 +29,7 @@
 		{title}
 		on:change={onSelectedDebounced}
 		>
-		{#each [...Object.keys(minerals)] as mineral}
+		{#each [...Object.keys(minerals)] as mineral (mineral)}
 			<option value="{mineral}" selected="{mineral === selected}">{mineral}</option>
 		{/each}
 	</select>

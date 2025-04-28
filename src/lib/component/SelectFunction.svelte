@@ -10,14 +10,14 @@
 	export let selected
 
 	const onSelected = (event) => {
-		selected = event.target.value
-		console.info('Function:', selected)
+	    selected = event.target.value
+	    console.info('Function:', selected)
 
-		if (controller) {
-			controller.abort() // Cancel previous request
-		}
+	    if (controller) {
+	        controller.abort() // Cancel previous request
+	    }
 
-		return false
+	    return false
 	}
 
 	const onSelectedDebounced = debounce(onSelected, 500)

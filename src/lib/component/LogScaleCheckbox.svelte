@@ -2,8 +2,8 @@
 	export let scale
 
 	function onScaleToggle (event) {
-		scale = event.target.checked ? 'log' : 'linear'
-		return false
+	    scale = event.target.checked ? 'log' : 'linear'
+	    return false
 	}
 </script>
 

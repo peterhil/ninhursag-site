@@ -16,6 +16,6 @@
 	import { onDestroy } from 'svelte'
 
 	onDestroy(() => {
-		alerts.reset()
+	    alerts.reset()
 	})
 </script>

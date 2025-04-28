@@ -3,7 +3,7 @@
 
 	export let x, y, height
 	export function yLabel (d) {
-		return compactInteger(d, 1)
+	    return compactInteger(d, 1)
 	}
 </script>
 

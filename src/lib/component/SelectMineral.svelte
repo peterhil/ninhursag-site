@@ -10,9 +10,9 @@
 	export let selected
 
 	const onSelected = (event) => {
-		selected = event.target.value
-		console.info('Mineral:', selected)
-		return false
+	    selected = event.target.value
+	    console.info('Mineral:', selected)
+	    return false
 	}
 
 	const onSelectedDebounced = debounce(onSelected, 500)

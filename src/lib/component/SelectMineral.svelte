@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { debounce } from 'debounce'
+	import debounce from 'debounce'
 	import { HeavyMetal } from '@icon-park/svg'
 
 	import IconPark from '$component/IconPark.svelte'

@@ -42,8 +42,8 @@ importers:
         specifier: ^8.0.1
         version: 8.0.1
       papaparse:
-        specifier: ^5.3.0
-        version: 5.4.1
+        specifier: ^5.5.2
+        version: 5.5.2
       ramda:
         specifier: 0.27.1
         version: 0.27.1
@@ -1337,8 +1337,8 @@ packages:
     resolution: {integrity: sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==}
     engines: {node: '>=10'}
 
-  papaparse@5.4.1:
-    resolution: {integrity: sha512-HipMsgJkZu8br23pW15uvo6sib6wne/4woLZPlFf3rpDyMe9ywEXUsuD7+6K9PRkJlVT51j/sCOYDKGGS3ZJrw==}
+  papaparse@5.5.2:
+    resolution: {integrity: sha512-PZXg8UuAc4PcVwLosEEDYjPyfWnTEhOrUfdv+3Bx+NuAb+5NhDmXzg5fHWmdCh1mP5p7JAZfFr3IMQfcntNAdA==}
 
   parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
@@ -2938,7 +2938,7 @@ snapshots:
     dependencies:
       p-limit: 3.1.0
 
-  papaparse@5.4.1: {}
+  papaparse@5.5.2: {}
 
   parent-module@1.0.1:
     dependencies:

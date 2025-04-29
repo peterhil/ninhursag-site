@@ -10,7 +10,7 @@ const config = {
 		vitePreprocess(),
 		preprocess({
 			scss: {
-				prependData: '@use "src/variables.scss" as *'
+				prependData: '@use "$src/variables.scss" as *;'
 			},
 			postcss: true
 		})
@@ -21,6 +21,7 @@ const config = {
 			$component: 'src/lib/component',
 			$store: 'src/lib/store',
 			$style: 'src/style',
+			$src: 'src',
 		},
 	}
 }

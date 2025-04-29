@@ -1,5 +1,10 @@
-<script>
-	export let x, y, width, height
+<script lang="ts">
+	let {
+		x,
+		y,
+		width,
+		height
+	} = $props();
 </script>
 
 <g class="grid">

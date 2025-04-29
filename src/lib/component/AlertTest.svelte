@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
 	import { alerts } from '$store/alerts'
 
 	export let msg = 'Welcome to Ninhursag! Nap all day cat dog corn cob.'

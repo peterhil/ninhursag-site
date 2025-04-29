@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { extent } from 'd3-array'
 	import { line as svgLine } from 'd3-shape'
 	import { scaleLinear, scaleLog } from 'd3-scale'
@@ -20,17 +20,28 @@
 	import { showAll } from '$store/showAll'
 	import { fixNaNs } from '$lib/charting'
 
-	export let data
 
-	// SVG attributes
-	export let width = 960
-	export let height = 660
-	export let preserveAspectRatio = 'xMidYMin meet'
-	export let viewBox = `0 -20 ${width} ${height + 40}`
+	
+	interface Props {
+		data: any;
+		// SVG attributes
+		width?: number;
+		height?: number;
+		preserveAspectRatio?: string;
+		viewBox?: any;
+	}
 
-	$: yMin = ($scale === 'log' ? 1 : 0)
-	$: yMaxExclude = (
-	    $scale === 'log' || $showAll === 'yes'
+	let {
+		data,
+		width = 960,
+		height = 660,
+		preserveAspectRatio = 'xMidYMin meet',
+		viewBox = `0 -20 ${width} ${height + 40}`
+	}: Props = $props();
+
+	let yMin = ($derived($scale === 'log' ? 1 : 0))
+	let yMaxExclude = (
+	    $derived($scale === 'log' || $showAll === 'yes'
 	        ? ['Year', 'Reserves fit']
 	        : [
 	            'Year',
@@ -38,23 +49,23 @@
 	            'Cumulative',
 	            'Cumulative fit',
 	            'Reserves fit',
-	        ])
-	$: selectedSeries = omit(yMaxExclude, data.columns)
-	$: yMax = reduce(max, yMin, chain(values, values(selectedSeries)))
-	$: x = scaleLinear()
+	        ]))
+	let selectedSeries = $derived(omit(yMaxExclude, data.columns))
+	let yMax = $derived(reduce(max, yMin, chain(values, values(selectedSeries))))
+	let x = $derived(scaleLinear()
 	    .range([0, width])
-	    .domain(extent(chain(keys, values(selectedSeries))))
+	    .domain(extent(chain(keys, values(selectedSeries)))))
 
-	$: y = ($scale === 'log' ? scaleLog() : scaleLinear())
+	let y = $derived(($scale === 'log' ? scaleLog() : scaleLinear())
 	    .range([height, 0])
-	    .domain([yMin, yMax])
+	    .domain([yMin, yMax]))
 
-	$: line = (data) => {
+	let line = $derived((data) => {
 	    const path = svgLine()
 	        .x(d => x(parseInt(d[0])))
 	        .y(d => y(parseFloat(d[1])))
 	    return fixNaNs(path(data))
-	}
+	})
 </script>
 
 <svg {width} {height} {preserveAspectRatio} {viewBox}>

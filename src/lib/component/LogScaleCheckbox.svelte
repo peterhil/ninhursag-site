@@ -1,5 +1,5 @@
-<script>
-	export let scale
+<script lang="ts">
+	let { scale = $bindable() } = $props();
 
 	function onScaleToggle (event) {
 	    scale = event.target.checked ? 'log' : 'linear'
@@ -10,6 +10,6 @@
 <label>
 	<input type="checkbox"
 		   checked="{scale === 'log'}"
-		   on:change="{onScaleToggle}">
+		   onchange={onScaleToggle}>
 	Logarithmic
 </label>

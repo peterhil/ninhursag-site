@@ -1,14 +1,18 @@
 <script>
+	import { run } from 'svelte/legacy';
+
 	import Alert from '$component/Alert.svelte'
 	import { alerts, maxLevel } from '$store/alerts'
 
-	var level = 'info'
-	var lastLevel = 'info'
+	var level = $state('info')
+	var lastLevel = $state('info')
 
 	// Make sure the last fading alert doesn’t change the alerts border colour
-	$: level = ($alerts.size > 0
-	    ? lastLevel = maxLevel($alerts)
-	    : lastLevel)
+	run(() => {
+		level = ($alerts.size > 0
+		    ? lastLevel = maxLevel($alerts)
+		    : lastLevel)
+	});
 </script>
 
 <div id="alerts" class={level}>

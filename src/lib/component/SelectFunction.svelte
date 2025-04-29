@@ -6,8 +6,7 @@
 
 	const title = "Function"
 
-	export let functions
-	export let selected
+	let { functions, selected = $bindable() } = $props();
 
 	const onSelected = (event) => {
 	    selected = event.target.value
@@ -32,7 +31,7 @@
 		id="function"
 		class="button button-action"
 		aria-label={title}
-		on:change={onSelectedDebounced}>
+		onchange={onSelectedDebounced}>
 		{#each functions.pdf as fn (fn)}
 			<option value="{fn}" selected="{fn === selected}">{fn}</option>
 		{/each}

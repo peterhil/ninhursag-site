@@ -1,8 +1,16 @@
-<script>
+<script lang="ts">
+	import { createBubbler } from 'svelte/legacy';
+
+	const bubble = createBubbler();
 	import { fade } from 'svelte/transition'
 
-	export let message
-	export let type = ''
+	interface Props {
+		message: any;
+		type?: string;
+		children?: import('svelte').Snippet;
+	}
+
+	let { message, type = '', children }: Props = $props();
 </script>
 
 <div
@@ -16,8 +24,8 @@
 	<button
 		class="button button-clear close"
 		aria-label="Close Alert"
-		on:click
+		onclick={bubble('click')}
 		tabindex="0"
 			>&times;</button>
-	<slot>{message}</slot>
+	{#if children}{@render children()}{:else}{message}{/if}
 </div>

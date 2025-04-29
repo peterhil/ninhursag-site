@@ -1,5 +1,9 @@
-<script>
-	export let title = 'Loading...'
+<script lang="ts">
+	interface Props {
+		title?: string;
+	}
+
+	let { title = 'Loading...' }: Props = $props();
 </script>
 
 <div class="loading" title="{title}">

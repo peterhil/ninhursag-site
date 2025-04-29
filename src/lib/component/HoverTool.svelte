@@ -1,7 +1,12 @@
-<script>
-	export let width, height, x, y
+<script lang="ts">
+	let {
+		width,
+		height,
+		x,
+		y
+	} = $props();
 
-	const point = { x: 0, y: 0 }
+	const point = $state({ x: 0, y: 0 })
 
 	// Get point in global SVG space
 	function cursorPoint (event) {
@@ -29,7 +34,7 @@
 	}
 </script>
 
-<g on:click={onClick}>
+<g onclick={onClick}>
 	<rect class="hover-area" {width} {height}/>
 	<line x1="{point.x}"
 		  x2="{point.x}"

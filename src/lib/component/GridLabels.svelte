@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
 	import { compactInteger } from 'humanize-plus'
 
-	export let x, y, height
+	let { x, y, height } = $props();
 	export function yLabel (d) {
 	    return compactInteger(d, 1)
 	}

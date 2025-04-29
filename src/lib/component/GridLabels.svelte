@@ -3,14 +3,14 @@
 
 	export let x, y, height
 	export function yLabel (d) {
-		return compactInteger(d, 1)
+	    return compactInteger(d, 1)
 	}
 </script>
 
 <g class="grid">
 	<g class="x-axis">
 		<g class="labels">
-			{#each x.ticks(13) as v}
+			{#each x.ticks(13) as v (v)}
 			<text x="{x(v)}"
 				  y="{height}"
 				  dy="1.25em"
@@ -23,7 +23,7 @@
 	</g>
 	<g class="y-axis">
 		<g class="labels">
-			{#each y.ticks(20) as v}
+			{#each y.ticks(20) as v (v)}
 			<text y="{y(v)}"
 				  x="0"
 				  dx="6.75em"

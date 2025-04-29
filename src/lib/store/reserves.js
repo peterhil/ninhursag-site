@@ -19,14 +19,15 @@ export const reserves = asyncable(
 		const series = 'Reserves'
 
 		if (getReserves(reserveData, mineral)) {
-			const calculated = calculateReserves(cumulative, reserveData, mineral, 'Cumulative', 'Reserves')
+			const calculated = calculateReserves(cumulative, reserveData, mineral, 'Cumulative')
 			// console.debug('[Reserves] Calculated:', calculated)
 
 			return {
 				columns: fromPairs([[series, calculated]]),
 				reserves: reserveData,
 			}
-		} else {
+		}
+		else {
 			return {
 				...initialValue,
 				reserves: reserveData,

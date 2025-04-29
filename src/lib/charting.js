@@ -13,6 +13,7 @@ import {
 
 export function fuzzyColor (str) {
 	const words = str.split(' ')
+
 	if (words.length > 1) {
 		const colors = map(fuzzyColor, filter(identity, words))
 		return reduce(tinycolor.mix, head(colors), tail(colors))
@@ -21,8 +22,11 @@ export function fuzzyColor (str) {
 	const sndx = soundexPhonetics(str || ' ')
 	const hue = (((sndx[0].charCodeAt())) % 26) * (360 / 26) // modulo is for unicode chars
 	const sat = parseInt(sndx.slice(1, 3), 7) * (50 / 48) + 25 // 0...48 => 50...100
+
 	let lig = parseInt(sndx.slice(3, 4), 7) * (50 / 6) + 50 // 0..6 => 50...100 (minus word length)
+
 	lig -= Math.min(50, str.length)
+
 	return tinycolor({ h: hue, s: sat, l: lig })
 }
 
@@ -41,7 +45,8 @@ export function seriesStyle (serie) {
 			stroke: fuzzyColor(serie.replace(/ \(\w+\)$/, '')).toHexString(),
 			'stroke-dasharray': '2px, 6px',
 		}
-	} else {
+	}
+	else {
 		style = {
 			stroke: fuzzyColor(serie).toHexString(),
 		}

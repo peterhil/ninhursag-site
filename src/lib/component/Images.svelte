@@ -10,7 +10,7 @@
 	<LoadingSpinner title="Loading images..." />
 {:then $images}
 	{#if $images[mineral]}
-		{#each $images[mineral] as image}
+		{#each $images[mineral] as image (image.src)}
 			<Image {image} />
 		{/each}
 	{/if}

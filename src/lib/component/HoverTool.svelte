@@ -5,27 +5,27 @@
 
 	// Get point in global SVG space
 	function cursorPoint (event) {
-		const svg = document.querySelector('svg')
-		const pt = svg.createSVGPoint()
+	    const svg = document.querySelector('svg')
+	    const pt = svg.createSVGPoint()
 
-		pt.x = event.clientX
-		pt.y = event.clientY
+	    pt.x = event.clientX
+	    pt.y = event.clientY
 
-		const res = pt.matrixTransform(svg.getScreenCTM().inverse())
+	    const res = pt.matrixTransform(svg.getScreenCTM().inverse())
 
-		point.x = res.x
-		point.y = res.y
+	    point.x = res.x
+	    point.y = res.y
 
-		return res
+	    return res
 	}
 
 	function onClick (event) {
-		const pt = cursorPoint(event)
-		console.log(
-			event,
-			x.invert(pt.x),
-			y.invert(pt.y),
-		)
+	    const pt = cursorPoint(event)
+	    console.log(
+	        event,
+	        x.invert(pt.x),
+	        y.invert(pt.y),
+	    )
 	}
 </script>
 

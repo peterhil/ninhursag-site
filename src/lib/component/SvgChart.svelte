@@ -3,12 +3,12 @@
 	import { line as svgLine } from 'd3-shape'
 	import { scaleLinear, scaleLog } from 'd3-scale'
 	import {
-		chain,
-		keys,
-		max,
-		omit,
-		reduce,
-		values
+	    chain,
+	    keys,
+	    max,
+	    omit,
+	    reduce,
+	    values
 	} from 'ramda'
 
 	import GridLabels from '$component/GridLabels.svelte'
@@ -30,30 +30,30 @@
 
 	$: yMin = ($scale === 'log' ? 1 : 0)
 	$: yMaxExclude = (
-		$scale === 'log' || $showAll === 'yes'
-			? ['Year', 'Reserves fit']
-			: [
-				'Year',
-				'Reserves',
-				'Cumulative',
-				'Cumulative fit',
-				'Reserves fit',
-			])
+	    $scale === 'log' || $showAll === 'yes'
+	        ? ['Year', 'Reserves fit']
+	        : [
+	            'Year',
+	            'Reserves',
+	            'Cumulative',
+	            'Cumulative fit',
+	            'Reserves fit',
+	        ])
 	$: selectedSeries = omit(yMaxExclude, data.columns)
 	$: yMax = reduce(max, yMin, chain(values, values(selectedSeries)))
 	$: x = scaleLinear()
-		.range([0, width])
-		.domain(extent(chain(keys, values(selectedSeries))))
+	    .range([0, width])
+	    .domain(extent(chain(keys, values(selectedSeries))))
 
 	$: y = ($scale === 'log' ? scaleLog() : scaleLinear())
-		.range([height, 0])
-		.domain([yMin, yMax])
+	    .range([height, 0])
+	    .domain([yMin, yMax])
 
-	$: line = (data, column) => {
-		const path = svgLine()
-			.x(d => x(parseInt(d[0])))
-			.y(d => y(parseFloat(d[1])))
-		return fixNaNs(path(data))
+	$: line = (data) => {
+	    const path = svgLine()
+	        .x(d => x(parseInt(d[0])))
+	        .y(d => y(parseFloat(d[1])))
+	    return fixNaNs(path(data))
 	}
 </script>
 

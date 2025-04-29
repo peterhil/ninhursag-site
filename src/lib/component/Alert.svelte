@@ -10,8 +10,8 @@
 	aria-live="assertive"
 	role="alertdialog"
 	tabindex="-1"
-	in:fade="{{ duration: 100 }}"
-	out:fade="{{ duration: 250 }}"
+	in:fade|global="{{ duration: 100 }}"
+	out:fade|global="{{ duration: 250 }}"
 	>
 	<button
 		class="button button-clear close"

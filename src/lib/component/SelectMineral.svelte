@@ -10,9 +10,9 @@
 	export let selected
 
 	const onSelected = (event) => {
-		selected = event.target.value
-		console.info('Mineral:', selected)
-		return false
+	    selected = event.target.value
+	    console.info('Mineral:', selected)
+	    return false
 	}
 
 	const onSelectedDebounced = debounce(onSelected, 500)
@@ -29,7 +29,7 @@
 		{title}
 		on:change={onSelectedDebounced}
 		>
-		{#each [...Object.keys(minerals)] as mineral}
+		{#each [...Object.keys(minerals)] as mineral (mineral)}
 			<option value="{mineral}" selected="{mineral === selected}">{mineral}</option>
 		{/each}
 	</select>

@@ -10,14 +10,14 @@
 	export let selected
 
 	const onSelected = (event) => {
-		selected = event.target.value
-		console.info('Function:', selected)
+	    selected = event.target.value
+	    console.info('Function:', selected)
 
-		if (controller) {
-			controller.abort() // Cancel previous request
-		}
+	    if (controller) {
+	        controller.abort() // Cancel previous request
+	    }
 
-		return false
+	    return false
 	}
 
 	const onSelectedDebounced = debounce(onSelected, 500)
@@ -33,7 +33,7 @@
 		class="button button-action"
 		aria-label={title}
 		on:change={onSelectedDebounced}>
-		{#each functions.pdf as fn}
+		{#each functions.pdf as fn (fn)}
 			<option value="{fn}" selected="{fn === selected}">{fn}</option>
 		{/each}
 	</select>

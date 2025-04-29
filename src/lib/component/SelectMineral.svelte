@@ -1,13 +1,12 @@
-<script>
-	import { debounce } from 'debounce'
+<script lang="ts">
+	import debounce from 'debounce'
 	import { HeavyMetal } from '@icon-park/svg'
 
 	import IconPark from '$component/IconPark.svelte'
 
 	const title = "Resource"
 
-	export let minerals = []
-	export let selected
+	let { minerals = [], selected = $bindable() } = $props();
 
 	const onSelected = (event) => {
 	    selected = event.target.value
@@ -27,7 +26,7 @@
 		id="mineral"
 		class="button button-action"
 		{title}
-		on:change={onSelectedDebounced}
+		onchange={onSelectedDebounced}
 		>
 		{#each [...Object.keys(minerals)] as mineral (mineral)}
 			<option value="{mineral}" selected="{mineral === selected}">{mineral}</option>

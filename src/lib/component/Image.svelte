@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
 	import { API_SERVER } from '$lib/api'
 
-	export let image
+	let { image } = $props();
 </script>
 
 <figure>

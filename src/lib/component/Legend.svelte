@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
 	import { seriesStyle } from '$lib/charting'
 
-	export let series
+	let { series } = $props();
 </script>
 
 <g class="legend" transform="translate(160, 30)">

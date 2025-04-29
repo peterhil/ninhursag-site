@@ -1,7 +1,11 @@
 <script lang="ts">
 	import type { MineralsData } from '$lib/types'
 
-	export let data: MineralsData[]
+	interface Props {
+		data: MineralsData[];
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <code>

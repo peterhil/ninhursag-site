@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import DataLoader from '$component/DataLoader.svelte'
 	import References from '$component/References.svelte'
 	import SvgChart from '$component/SvgChart.svelte'
@@ -15,7 +15,7 @@
 
 	const caption = 'U.S. Geological Survey statistics (Metric tons gross weight)'
 
-	export let data
+	let { data } = $props();
 </script>
 
 <div class="selections">
@@ -25,7 +25,7 @@
 <div class="scale">
 	<span class="hide-sm">Scale</span>
 	<LogScaleCheckbox bind:scale="{$scale}" />
-	{#if $scale === 'linear' }
+	{#if $scale === 'linear'}
 		<CheckboxShowAll bind:showAll="{$showAll}" />
 	{/if}
 </div>
@@ -36,9 +36,11 @@
 
 		<figure>
 			<figcaption>{caption}</figcaption>
-			<DataLoader let:data data={chart}>
-				<SvgChart {data}></SvgChart>
-			</DataLoader>
+			<DataLoader  data={chart}>
+				{#snippet children({ data })}
+								<SvgChart {data}></SvgChart>
+											{/snippet}
+						</DataLoader>
 		</figure>
 	</div>
 

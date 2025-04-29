@@ -1,12 +1,12 @@
-<script>
+<script lang="ts">
 	import { images } from '$store/images.js'
 	import Image from '$component/Image.svelte'
 	import LoadingSpinner from '$component/LoadingSpinner.svelte'
 
-	export let mineral
+	let { mineral } = $props();
 </script>
 
-{#await $images }
+{#await $images}
 	<LoadingSpinner title="Loading images..." />
 {:then $images}
 	{#if $images[mineral]}

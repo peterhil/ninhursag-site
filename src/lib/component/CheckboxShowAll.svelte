@@ -1,5 +1,5 @@
-<script>
-	export let showAll
+<script lang="ts">
+	let { showAll = $bindable() } = $props();
 
 	function onToggle (event) {
 	    showAll = event.target.checked ? 'yes' : 'no'
@@ -10,6 +10,6 @@
 <label>
 	<input type="checkbox"
 		   checked="{showAll === 'yes'}"
-		   on:change="{onToggle}">
+		   onchange={onToggle}>
 	Show all
 </label>

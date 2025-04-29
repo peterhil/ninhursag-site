@@ -1,4 +1,4 @@
-import { parse } from 'papaparse'
+import Papa from 'papaparse'
 import {
 	complement,
 	compose,
@@ -29,7 +29,7 @@ function isData (row) {
 }
 
 function getRows (csv) {
-	const parsed = parse(csv, {
+	const parsed = Papa.parse(csv, {
 		dynamicTyping: false,
 		header: false,
 	})
@@ -68,7 +68,7 @@ export function cleanup (rawData) {
 	// console.debug('[Data cleanup] Raw data:', rawData)
 
 	// Reparse data rows with dynamic typing
-	const reparsed = parse(text, {
+	const reparsed = Papa.parse(text, {
 		header: true,
 		dynamicTyping: true,
 	})

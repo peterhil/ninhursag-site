@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { setConfig } from '@icon-park/svg'
 
-	export let icon
+	let { ...props } = $props();
 
 	setConfig({
 	    theme: 'outline',
@@ -15,7 +15,7 @@
 	    // innerFillColor: '#43CCF8'
 	})
 
-	const svg = icon({...$$props})
+	const svg = props.icon({...props})
 </script>
 
 {@html svg}

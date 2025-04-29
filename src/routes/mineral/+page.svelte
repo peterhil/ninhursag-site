@@ -8,7 +8,11 @@
 
 	type OutputProps = PageData & MineralsOutput
 
-	export let data: OutputProps
+	interface Props {
+		data: OutputProps;
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <main>

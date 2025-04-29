@@ -26,11 +26,11 @@ export default ts.config(
 	},
 	{
 		files: [
-			'**/*.svelte',
-			'**/*.svelte.ts',
 			'**/*.js',
-			'**/*.ts',
+			'**/*.svelte',
 			'**/*.svelte.js',
+			'**/*.svelte.ts',
+			'**/*.ts',
 		],
 		languageOptions: {
 			parserOptions: {

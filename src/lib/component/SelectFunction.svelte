@@ -1,6 +1,6 @@
 <script lang="ts">
 	import FunctionMath from 'carbon-icons-svelte/lib/FunctionMath.svelte'
-	import { debounce } from 'debounce'
+	import debounce from 'debounce'
 
 	import { controller } from '$store/estimate'
 
